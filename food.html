@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Monthly Expenses</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .expense-field {
+            margin: 10px 0;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            width: 100%;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/home">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/bills">
+          <i class="fas fa-money-bill"></i> Bills
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/shopping">
+          <i class="fas fa-shopping-cart"></i> Shopping
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/study">
+          <i class="fas fa-graduation-cap"></i> Study
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/food">
+          <i class="fas fa-shopping-basket"></i> Food & Grocery
+        </a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/profile">
+          <i class="fas fa-view-profile"></i> Profile
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+    <h1>Monthly Expenses</h1>
+</header>
+
+<form action="/food" method="post">
+    <div class="container">
+        <div class="expense-field">
+            <label for="groceries">Groceries:</label>
+            <input type="number" name="groceries" id="groceries" placeholder="Enter amount">
+        </div>
+
+        <div class="expense-field">
+            <label for="eating-out">Eating Out:</label>
+            <input type="number" name="eating-out" id="eating-out" placeholder="Enter amount">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save expense</button>
+    </div>
+</form>
+
+</body>
+</html>
